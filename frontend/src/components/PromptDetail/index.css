@@ -1,0 +1,63 @@
+.detail-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  border: 1px solid #e2e8f0;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* HEADER */
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.detail-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+/* SECTION */
+.detail-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #718096;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* CONTENT BOX */
+.content-box {
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 18px;
+  border: 1px solid #e2e8f0;
+}
+
+.content-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #2d3748;
+}
+
+/* META */
+.detail-meta {
+  display: flex;
+  gap: 20px;
+  font-size: 13px;
+  color: #a0aec0;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 12px;
+}

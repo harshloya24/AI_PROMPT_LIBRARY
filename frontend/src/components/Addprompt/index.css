@@ -1,0 +1,101 @@
+.form-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  border: 1px solid #e2e8f0;
+  max-width: 650px;
+  margin: 0 auto 30px auto;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* FORM */
+.prompt-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+/* GROUP */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* LABEL */
+.form-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+/* INPUT */
+.form-input,
+.form-textarea {
+  padding: 12px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.2s;
+  outline: none;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: #6c63ff;
+}
+
+/* ERROR */
+.error-msg {
+  color: #e53e3e;
+  font-size: 13px;
+}
+
+/* CHAR COUNT */
+.char-count {
+  font-size: 12px;
+  color: #a0aec0;
+}
+
+/* COMPLEXITY BAR */
+.complexity-bar {
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  margin-top: 6px;
+  overflow: hidden;
+}
+
+.complexity-fill {
+  height: 100%;
+  background: linear-gradient(to right, #68d391, #f6e05e, #fc8181);
+  transition: width 0.3s;
+}
+
+/* BUTTON */
+.btn-primary {
+  background: #6c63ff;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #5a52d5;
+}
+
+.btn-primary:disabled {
+  background: #b794f4;
+  cursor: not-allowed;
+}
+
+/* ACTIONS */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+}
