@@ -26,17 +26,20 @@ function AddPrompt({ onAdd }) {
     setLoading(true)
 
     try {
-      const res = await fetch("http://localhost:5000/prompts/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          title,
-          content,
-          complexity: Number(complexity)
-        })
-      })
+      const res = await fetch(
+        "https://ai-prompt-library-wdav.onrender.com/prompts/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            title,
+            content,
+            complexity
+          })
+        }
+      )
 
       const data = await res.text()
 
@@ -49,7 +52,8 @@ function AddPrompt({ onAdd }) {
         setError(data)
       }
     } catch (e) {
-      setError("Something went wrong")
+      // better error message for render cold start
+      setError("Server is starting... please wait and try again")
     }
 
     setLoading(false)
@@ -91,7 +95,7 @@ function AddPrompt({ onAdd }) {
             type="number"
             className="form-input"
             value={complexity}
-            onChange={(e) => setComplexity(e.target.value)}
+            onChange={(e) => setComplexity(Number(e.target.value))}
           />
 
           <div className="complexity-bar">
