@@ -13,7 +13,9 @@ function PromptList({ onSelect, reload }) {
       setError("")
 
       try {
-        const res = await fetch("http://localhost:5000/prompts/")
+        const res = await fetch(
+          "https://ai-prompt-library-wdav.onrender.com/prompts/"
+        )
 
         if (res.status === 200) {
           const data = await res.json()
@@ -23,7 +25,8 @@ function PromptList({ onSelect, reload }) {
           setError(msg)
         }
       } catch (e) {
-        setError("Something went wrong")
+        // better message for Render cold start
+        setError("Server is starting... please wait and try again")
       }
 
       setLoading(false)
